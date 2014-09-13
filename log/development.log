@@ -236,3 +236,27 @@ Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2014-09-13 17:43:40 -
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-13 17:43:40 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-13 17:45:42 -0400
+Processing by TemplatesController#index as HTML
+  Rendered templates/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 78ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/templates.css?body=1" for 127.0.0.1 at 2014-09-13 17:45:42 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-13 17:45:42 -0400
+
+
+Started GET "/assets/templates.js?body=1" for 127.0.0.1 at 2014-09-13 17:45:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-13 17:45:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-13 17:45:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-13 17:45:42 -0400
