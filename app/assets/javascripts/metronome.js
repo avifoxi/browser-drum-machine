@@ -117,9 +117,7 @@ function init(){
 
     tambourineBuff = [];
 
-    loadDogSound("/Tamb_ac_close.wav");
-
-    lame = new lameMetronome(context, 500);
+    loadDogSound("/assets/Tamb_ac_close.wav");
 
 }
 
