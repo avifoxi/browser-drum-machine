@@ -1,0 +1,99 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+
+/*body {background-color: red;}*/
+
+html { min-height: 100%;}
+
+body {
+
+  background-image:         linear-gradient(to bottom, rgb(117, 126, 156), rgb(190,190,170)); /* Standard syntax; must be last */
+}
+
+section{
+	width: 80%;
+	margin: 2em auto;
+	position: relative;
+}
+
+#righty, #lefty{
+	position: absolute;
+	width: 1em;
+	height: 100%;
+	background-image: url(./public/woodpanel.jpg)
+}
+
+#righty {
+	right: 0;
+}
+
+
+
+
+.special {
+	background-color: white;
+	text-align: center;
+}
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+table, td {
+	border: 0.1em solid black;
+}
+
+td {
+	width: 5em;
+}
+
+.beatCell {
+	/*width: 40px;*/
+	height: 2.5em;
+	background: #ddd;
+	margin: 0 auto;
+
+	/*border-radius: 100%;*/
+	position: relative;
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.beatCell label {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	height: 30px;
+	/*border-radius: 100%;*/
+
+/*	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;*/
+	transition: all .2s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: 2;
+
+	background: black;
+
+/*	-webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+*/	box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.beatCell input[type=checkbox]:checked + label {
+	background: #26ca28;
+	opacity: 0.4;
+}
