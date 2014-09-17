@@ -1,8 +1,20 @@
 function View(elements) {
 	this.playToggle = elements.playToggle;
 	this.tempoSlide = elements.tempoSlide;
-	this.volKnob = elements.volKnob;
+	// this.volKnob = elements.volKnob;
+
+	this.tempoSlide.change(function(e){ 
+		console.log(e); 
+	});
+
+
 }
+
+
+// onInput="met.tempo = event.target.value; document.getElementById('showTempo').innerText= met.tempo;"
+
+
+// <input id="tempo" type="range" min="30.0" max="160.0" step="1" value="120" style="height: 20px; width: 200px" onInput="met.tempo = event.target.value; document.getElementById('showTempo').innerText= met.tempo;">
 
 
 View.prototype = {
@@ -69,17 +81,6 @@ function toggleMetroLight(){
 
 
 
-$(document).ready(function() {
-  
 
-  $('#newRow').submit(function(e){
-  	e.preventDefault();
-  	addSound(e);
-  })
-
-  console.log('hi from the view');
-
-
-});
 
 

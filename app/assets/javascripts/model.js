@@ -44,21 +44,3 @@ function samplePlay(buffer, when) {
   source.start(when);                           // play the source now                                             // note: on older systems, may have to use deprecated noteOn(time);
 }
 
-function init(){
-
-    // NOTE: THIS RELIES ON THE MONKEYPATCH LIBRARY BEING LOADED FROM
-    // Http://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js
-    // TO WORK ON CURRENT CHROME!!  But this means our code can be properly
-    // spec-compliant, and work on Chrome, Safari and Firefox.
-
-    Context = new AudioContext();
-
-    met = new MetroGnome( Context )
-
-    tambourineBuff = [];
-
-    // loadDogSound("/assets/Tamb_ac_close.wav");
-
-}
-
-window.addEventListener("load", init );
