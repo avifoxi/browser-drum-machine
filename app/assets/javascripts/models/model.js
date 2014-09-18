@@ -1,11 +1,16 @@
 function Model() {
-	this.metronome;
+	this.met;
 	this.audioContext; // should context be globally available? 
 	this.template;
 }
 
 
 Model.prototype = {
+	init : function() {
+		var _this = this;
+		this.met = new MetroGnome( _this.context );
+		this.template = _this.prepTemplate();
+	},
 	loadDogSound : function(url) {
 	 	var request = new XMLHttpRequest();
 	  request.open('GET', url, true);
@@ -18,6 +23,9 @@ Model.prototype = {
 	    }, function(){ console.log('oh shit')});
 	  }
 	  request.send();
+	},
+	prepTemplate : function() {
+		console.log('placeholder for prepping template from json')
 	}
 
 }
