@@ -25,34 +25,37 @@ View.prototype = {
 		var table = document.createElement('table');
 
 		for (var i = 0; i < rowData.length; i++) {
-			_this.addSound( rowData[i], table )
+			var fullRow = _this.addSound(rowData[i])
+			table.appendChild(fullRow);
 		}
 		// create table to store elements
 		// for each SP in model.template.samplePatterns
 		// create row, fill with beats, check if play or no
 		// append to table, repeat
 		// append table to dom
-
+		$('section').append(table); 
 
 	},
-	addSound : function( rowData, table )	{
-		var newRowId = rowData.name;
+	addSound : function( rowData )	{
+		
+		var name = rowData.name;
 		var ptrn = rowData.pattern;
-		var row = createNewRow(newRowId);
+		var row = this.createNewRow(name);
 		
 		for (var i = 0; i < ptrn.length; i++){
-			appendNewBeat(newRowId, i, ptrn[i]);
+			this.appendNewBeat(row, name, i, ptrn[i]);
 		}
+		return row;
 	},
-	createNewRow : function(rowId)	{
+	createNewRow : function(name)	{
 		var row = document.createElement('tr');
-		row.id = rowId;
+		row.id = name;
 		var heading = document.createElement('th')
-		heading.innerText = rowId;
+		heading.innerText = name;
 		row.appendChild(heading);
 		return row;
 	}, 
-	appendNewBeat : function(rowId, index) {
+	appendNewBeat : function(row, name, index, playBool) {
 	
 		var td = document.createElement('td');
 		var beatCell = document.createElement('div');
@@ -60,7 +63,10 @@ View.prototype = {
 		
 		var input = document.createElement('input');
 		input.type = 'checkbox';
-		var beatId = rowId + index;
+
+		// use playBool to check or uncheck 
+
+		var beatId = name + index;
 		input.id = beatId
 		
 		beatCell.appendChild(input);
@@ -71,7 +77,7 @@ View.prototype = {
 		beatCell.appendChild(label);
 		td.appendChild(beatCell);
 
-		$('#' + rowId).append(td);
+		row.appendChild(td);
 
 	},
 	removeRow : function(rowId) {
