@@ -46,9 +46,9 @@ Model.prototype = {
 // }
 
 function samplePlay(buffer, when) {
-  var source = context.createBufferSource(); // creates a sound source
+  var source = Context.createBufferSource(); // creates a sound source
   source.buffer = buffer;                    // tell the source which sound to play
-  source.connect(context.destination);       // connect the source to the context's destination (the speakers)
+  source.connect(Context.destination);       // connect the source to the context's destination (the speakers)
   source.start(when);                           // play the source now                                             // note: on older systems, may have to use deprecated noteOn(time);
 }
 

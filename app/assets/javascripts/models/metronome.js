@@ -57,7 +57,7 @@ MetroGnome.prototype = {
  
         _this.timerID = window.setTimeout( _this.scheduler.bind(_this), _this.lookahead );
     },
-    play : function() {
+    togglePlay : function() {
         var _this = this;
         _this.isPlaying = !(_this.isPlaying);
 

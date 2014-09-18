@@ -1,6 +1,5 @@
 $(document).ready(function() {
   
-
   // initialize with Model -- send ajax call to server, json of template content
   // on promise - initialize view building board 
   // data to be served by server, placeholder
@@ -13,7 +12,7 @@ $(document).ready(function() {
 
     var snare = new SamplePattern("/assets/Snare_ac_close.wav", 'snare', [0,1,0,1,0,1,0,1]);
 
-    var temp = new Template({'samplePatterns' : [kick, snare, crash, hat], 'tempo' : 120})
+    var temporarilyServerFree = new Template({'samplePatterns' : [kick, snare, crash, hat], 'tempo' : 120})
 
   Context = new AudioContext();
 
@@ -21,7 +20,7 @@ $(document).ready(function() {
     'context' : Context
   });
 
-  Model.template = temp;
+  Model.template = temporarilyServerFree;
 
   View = new View( Model, {
   	'tempoSlide' : $('#tempoSlide'),
@@ -34,27 +33,3 @@ $(document).ready(function() {
   
 
 });
-
-
-
-
-
-
-// function init(){
-
-//     // NOTE: THIS RELIES ON THE MONKEYPATCH LIBRARY BEING LOADED FROM
-//     // Http://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js
-//     // TO WORK ON CURRENT CHROME!!  But this means our code can be properly
-//     // spec-compliant, and work on Chrome, Safari and Firefox.
-
-//     Context = new AudioContext();
-
-//     met = new MetroGnome( Context )
-
-//     tambourineBuff = [];
-
-//     // loadDogSound("/assets/Tamb_ac_close.wav");
-
-// }
-
-// window.addEventListener("load", init );
