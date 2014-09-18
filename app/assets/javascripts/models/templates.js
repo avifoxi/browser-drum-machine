@@ -1,6 +1,6 @@
-function Template() {
-	this.samplePatterns = [];
-	this.tempo;
+function Template(params) {
+	this.samplePatterns = params.samplePatterns;
+	this.tempo = params.tempo;
 }
 
 function SamplePattern(urlPath, name, pattern) {
