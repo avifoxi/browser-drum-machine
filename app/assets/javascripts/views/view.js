@@ -1,4 +1,5 @@
-function View(elements) {
+function View(model, elements) {
+	this.model = model;
 	this.playToggle = elements.playToggle;
 	this.tempoSlide = elements.tempoSlide;
 	// this.volKnob = elements.volKnob;
@@ -18,23 +19,38 @@ function View(elements) {
 
 
 View.prototype = {
-	addSound : function(e)	{
-		var form = e.currentTarget;
-		var newRowId = form.firstElementChild.value;
-		console.log(newRowId);
-		appendNewRow(newRowId);
+	buildGrid : function() {
+		var _this = this;
+		var rowData = _this.model.template.samplePatterns;
+		var table = document.createElement('table');
 
-		for (var i = 0; i < 4; i++){
-			appendNewBeat(newRowId, i);
+		for (var i = 0; i < rowData.length; i++) {
+			_this.addSound( rowData[i], table )
+		}
+		// create table to store elements
+		// for each SP in model.template.samplePatterns
+		// create row, fill with beats, check if play or no
+		// append to table, repeat
+		// append table to dom
+
+
+	},
+	addSound : function( rowData, table )	{
+		var newRowId = rowData.name;
+		var ptrn = rowData.pattern;
+		var row = createNewRow(newRowId);
+		
+		for (var i = 0; i < ptrn.length; i++){
+			appendNewBeat(newRowId, i, ptrn[i]);
 		}
 	},
-	appendNewRow : function(rowId)	{
+	createNewRow : function(rowId)	{
 		var row = document.createElement('tr');
 		row.id = rowId;
 		var heading = document.createElement('th')
 		heading.innerText = rowId;
 		row.appendChild(heading);
-		$('table').append(row);
+		return row;
 	}, 
 	appendNewBeat : function(rowId, index) {
 	

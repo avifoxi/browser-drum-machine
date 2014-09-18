@@ -1,5 +1,3 @@
-console.log('hello grrl')
-
 function MetroGnome( context ) {
     
     this.isPlaying = false;      // Are we currently playing?

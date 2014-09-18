@@ -34,16 +34,4 @@ Template.prototype = {
 
 }
 
-// function loadDogSound(url) {
-//  	var request = new XMLHttpRequest();
-//   request.open('GET', url, true);
-//   request.responseType = 'arraybuffer';
 
-//   // Decode asynchronously
-//   request.onload = function() {
-//     context.decodeAudioData(request.response, function(buffer) {
-//       met.checkedSounds = [ buffer ];
-//     }, function(){ console.log('oh shit')});
-//   }
-//   request.send();
-// }

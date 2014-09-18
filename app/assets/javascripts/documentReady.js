@@ -24,16 +24,15 @@ $(document).ready(function() {
 
     Model.template = temp;
 
-  View = new View({
+  View = new View( Model, {
   	'tempoSlide' : $('#tempoSlide'),
   	'playToggle' : 'butt'
   });
 
   Controller = new Controller(Model, View);
 
-
-  console.log('hi from the view');
-
+  Controller.init();
+  
 
 });
 
