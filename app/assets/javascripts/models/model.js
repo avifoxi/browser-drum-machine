@@ -1,7 +1,7 @@
 function Model(params) {
 	this.met = 'metronome placeholder';
 	this.audioContext = params.context; // should context be globally available? 
-	this.template = params.template;
+	this.template = 'placeholder for template';
 }
 
 

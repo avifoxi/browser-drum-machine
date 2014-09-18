@@ -28,11 +28,6 @@ View.prototype = {
 			var fullRow = _this.addSound(rowData[i])
 			table.appendChild(fullRow);
 		}
-		// create table to store elements
-		// for each SP in model.template.samplePatterns
-		// create row, fill with beats, check if play or no
-		// append to table, repeat
-		// append table to dom
 		$('section').append(table); 
 
 	},
@@ -64,8 +59,6 @@ View.prototype = {
 		var input = document.createElement('input');
 		input.type = 'checkbox';
 
-		// use playBool to check or uncheck 
-
 		var beatId = name + index;
 		input.id = beatId
 		
@@ -78,6 +71,10 @@ View.prototype = {
 		td.appendChild(beatCell);
 
 		row.appendChild(td);
+		
+		if (playBool == 1) {
+			input.checked = true;
+		}
 
 	},
 	removeRow : function(rowId) {

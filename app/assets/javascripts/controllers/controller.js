@@ -9,6 +9,7 @@ Controller.prototype = {
 		
 		// 2 - construct view based on model contents
 		this.view.buildGrid();
+		this.model.template.prepSamplePatterns();
 
 	},
 	buildGrid : function() {
