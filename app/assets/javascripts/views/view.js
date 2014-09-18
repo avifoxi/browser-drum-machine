@@ -12,6 +12,11 @@ function View(model, elements) {
 }
 
 
+// this tells what's been clicked... fuck YEAH
+// $('table').change(function(e){console.log(e.target)})
+
+
+
 // onInput="met.tempo = event.target.value; document.getElementById('showTempo').innerText= met.tempo;"
 
 
@@ -22,11 +27,11 @@ View.prototype = {
 	buildGrid : function() {
 		var _this = this;
 		var rowData = _this.model.template.samplePatterns;
-		var table = document.createElement('table');
+		var table = $('table');
 
 		for (var i = 0; i < rowData.length; i++) {
 			var fullRow = _this.addSound(rowData[i])
-			table.appendChild(fullRow);
+			table.append(fullRow);
 		}
 		$('section').append(table); 
 
