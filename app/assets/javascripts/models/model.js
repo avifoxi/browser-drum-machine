@@ -31,6 +31,12 @@ Model.prototype = {
 			return sp.pattern[index] == true
 		});
 		return targets;
+	},
+	togglePlay : function() {
+		this.met.togglePlay();
+	},
+	updateTempo : function(newTempo){
+		this.met.tempo = newTempo;
 	}
 }
 

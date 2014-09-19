@@ -24,7 +24,7 @@ $(document).ready(function() {
 
   View = new View( Model, {
   	'tempoSlide' : $('#tempoSlide'),
-  	'playToggle' : 'butt',
+  	'playToggle' : $('#play'),
     '$table' : $('table')
   });
 

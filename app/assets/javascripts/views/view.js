@@ -1,25 +1,24 @@
 function View(model, elements) {
 	this.model = model;
-	this.playToggle = elements.playToggle;
+	this.$playToggle = elements.playToggle;
 	this.tempoSlide = elements.tempoSlide;
 	this.$table = elements.$table;
 	// this.volKnob = elements.volKnob;
 
 	var _this = this;
 	this.tempoSlide.change(function(e){ 
-		console.log(e); 
+		Controller.updateTempo(e); 
 	});
 
-	this.$table.change(function(e){		
+	this.$table.change(function(e){	
 		_this.model.updateTemplate(e)
 	});
 
+	this.$playToggle.click(function(e){
+		Controller.togglePlay();
+	})
 
 }
-
-
-// this tells what's been clicked... fuck YEAH
-// $('table').change(function(e){console.log(e.target)})
 
 
 
@@ -34,67 +33,17 @@ View.prototype = {
 		var patterns = Model.template.samplePatterns;
 		
 		beatBuilder.buildGrid(patterns);
-
-		// var _this = this;
-		// var rowData = _this.model.template.samplePatterns;
-		// var table = $('table');
-
-		// for (var i = 0; i < rowData.length; i++) {
-		// 	var fullRow = _this.addSound(rowData[i])
-		// 	table.append(fullRow);
-		// }
-		// $('section').append(table); 
-
-	} 
-	// addSound : function( rowData )	{
-		
-	// 	var name = rowData.name;
-	// 	var ptrn = rowData.pattern;
-	// 	var row = this.createNewRow(name);
-		
-	// 	for (var i = 0; i < ptrn.length; i++){
-	// 		this.appendNewBeat(row, name, i, ptrn[i]);
-	// 	}
-	// 	return row;
-	// },
-	// createNewRow : function(name)	{
-	// 	var row = document.createElement('tr');
-	// 	row.id = name;
-	// 	var heading = document.createElement('th')
-	// 	heading.innerText = name;
-	// 	row.appendChild(heading);
-	// 	return row;
-	// }, 
-	// appendNewBeat : function(row, name, index, playBool) {
-	
-	// 	var td = document.createElement('td');
-	// 	var beatCell = document.createElement('div');
-	// 	beatCell.classList.add('beatCell');
-		
-	// 	var input = document.createElement('input');
-	// 	input.type = 'checkbox';
-
-	// 	var beatId = name + '-' + index;
-	// 	input.id = beatId
-		
-	// 	beatCell.appendChild(input);
-
-	// 	var label = document.createElement('label');
-	// 	label.htmlFor = beatId;
-
-	// 	beatCell.appendChild(label);
-	// 	td.appendChild(beatCell);
-
-	// 	row.appendChild(td);
-		
-	// 	if (playBool) {
-	// 		input.checked = true;
-	// 	}
-
-	// },
-	// removeRow : function(rowId) {
-	// 	$("#" + rowId).remove();
-	// }
+	},
+	togglePlayText : function(playing) {
+		if (playing) {
+			$('#play').html('stop')
+		} else	{
+			$('#play').html('play')
+		}
+	},
+	updateTempoDisplay : function(tempo) {
+		$('#showTempo').html(tempo)
+	} 	
 }
 
 

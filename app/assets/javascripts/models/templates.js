@@ -30,8 +30,6 @@ Template.prototype = {
 	  }
 	  request.send();
 	}
-
-
 }
 
 
