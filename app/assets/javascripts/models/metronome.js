@@ -33,24 +33,24 @@ MetroGnome.prototype = {
         
         // or - eliminate the wrap - keep a running tally of 16th notes - and deduce each soundSequences next column by runnin a modulo of the current 16th. post MVP
 
-        if (this.current16thNote == 16) {
+        if (this.current16thNote == 8) {
             this.current16thNote = 0;
         }
     }, 
     scheduleNote : function( sounds, time ) {
         // var _this = this;
         for (var i = 0; i < sounds.length ; i++) {
-            samplePlay(sounds[i], time);
+            samplePlay(sounds[i].decodedBuffer, time);
         }    
     },
     scheduler : function() {
     // while there are notes that will need to play before the next interval,
         // schedule them and advance the pointer.
-        
         var _this = this;
-        while (_this.nextNoteTime < context.currentTime + _this.scheduleAheadTime ) {
+        var scheduled = Model.scheduledSamples( _this.current16thNote );
+        while (_this.nextNoteTime < Context.currentTime + _this.scheduleAheadTime ) {
 
-            _this.scheduleNote( _this.checkedSounds, _this.nextNoteTime );
+            _this.scheduleNote( scheduled, _this.nextNoteTime );
             _this.nextNote();
             // check for scheduled again inside loop?
         }
@@ -63,7 +63,7 @@ MetroGnome.prototype = {
 
         if (_this.isPlaying) { // start playing
             _this.current16thNote = 0;
-            _this.nextNoteTime = context.currentTime;
+            _this.nextNoteTime = Context.currentTime;
             _this.scheduler();    // kick off scheduling
             return "stop";
         } else {

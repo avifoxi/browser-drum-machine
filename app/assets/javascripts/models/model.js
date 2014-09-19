@@ -9,7 +9,8 @@ Model.prototype = {
 	init : function() {
 		var _this = this;
 		this.met = new MetroGnome( _this.context );
-		this.template = _this.prepTemplate();
+		// this.template = _this.prepTemplate();
+		this.template.prepSamplePatterns();
 	},
 	prepTemplate : function() {
 		// console.log('placeholder for prepping template from json')
@@ -24,12 +25,11 @@ Model.prototype = {
 		
 		target.pattern[ nameIndex[1] ] = !(target.pattern[ nameIndex[1] ]);
 	},
-	samplesToSchedule : function(index) {
+	scheduledSamples : function(index) {
 		var sPs = this.template.samplePatterns;
 		var targets = sPs.filter(function(sp) {
 			return sp.pattern[index] == true
 		});
-
 		return targets;
 	}
 }

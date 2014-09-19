@@ -8,8 +8,10 @@ Controller.prototype = {
 		// 1 - ajax template info, format model
 		
 		// 2 - construct view based on model contents
+		
+		this.model.init();
 		this.view.buildGrid();
-		this.model.template.prepSamplePatterns();
+
 
 	},
 	buildGrid : function() {
