@@ -1,5 +1,3 @@
-console.log('hello grrl')
-
 function MetroGnome( context ) {
     
     this.isPlaying = false;      // Are we currently playing?
@@ -35,37 +33,37 @@ MetroGnome.prototype = {
         
         // or - eliminate the wrap - keep a running tally of 16th notes - and deduce each soundSequences next column by runnin a modulo of the current 16th. post MVP
 
-        if (this.current16thNote == 16) {
+        if (this.current16thNote == 8) {
             this.current16thNote = 0;
         }
     }, 
     scheduleNote : function( sounds, time ) {
         // var _this = this;
         for (var i = 0; i < sounds.length ; i++) {
-            samplePlay(sounds[i], time);
+            samplePlay(sounds[i].decodedBuffer, time);
         }    
     },
     scheduler : function() {
     // while there are notes that will need to play before the next interval,
         // schedule them and advance the pointer.
-        
         var _this = this;
-        while (_this.nextNoteTime < context.currentTime + _this.scheduleAheadTime ) {
+        var scheduled = Model.scheduledSamples( _this.current16thNote );
+        while (_this.nextNoteTime < Context.currentTime + _this.scheduleAheadTime ) {
 
-            _this.scheduleNote( _this.checkedSounds, _this.nextNoteTime );
+            _this.scheduleNote( scheduled, _this.nextNoteTime );
             _this.nextNote();
             // check for scheduled again inside loop?
         }
  
         _this.timerID = window.setTimeout( _this.scheduler.bind(_this), _this.lookahead );
     },
-    play : function() {
+    togglePlay : function() {
         var _this = this;
         _this.isPlaying = !(_this.isPlaying);
 
         if (_this.isPlaying) { // start playing
             _this.current16thNote = 0;
-            _this.nextNoteTime = context.currentTime;
+            _this.nextNoteTime = Context.currentTime;
             _this.scheduler();    // kick off scheduling
             return "stop";
         } else {
@@ -73,52 +71,6 @@ MetroGnome.prototype = {
             return "play";
         }
     }
-
-
 }
 
 
-
-
-
-
-function loadDogSound(url) {
- 	var request = new XMLHttpRequest();
-  request.open('GET', url, true);
-  request.responseType = 'arraybuffer';
-
-  // Decode asynchronously
-  request.onload = function() {
-    context.decodeAudioData(request.response, function(buffer) {
-      met.checkedSounds = [ buffer ];
-    }, function(){ console.log('oh shit')});
-  }
-  request.send();
-}
-
-function samplePlay(buffer, when) {
-  var source = context.createBufferSource(); // creates a sound source
-  source.buffer = buffer;                    // tell the source which sound to play
-  source.connect(context.destination);       // connect the source to the context's destination (the speakers)
-  source.start(when);                           // play the source now
-                                             // note: on older systems, may have to use deprecated noteOn(time);
-}
-
-function init(){
-
-    // NOTE: THIS RELIES ON THE MONKEYPATCH LIBRARY BEING LOADED FROM
-    // Http://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js
-    // TO WORK ON CURRENT CHROME!!  But this means our code can be properly
-    // spec-compliant, and work on Chrome, Safari and Firefox.
-
-    context = new AudioContext();
-
-    met = new MetroGnome( context )
-
-    tambourineBuff = [];
-
-    loadDogSound("/assets/Tamb_ac_close.wav");
-
-}
-
-window.addEventListener("load", init );
