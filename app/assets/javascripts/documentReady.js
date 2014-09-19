@@ -4,13 +4,13 @@ $(document).ready(function() {
   // on promise - initialize view building board 
   // data to be served by server, placeholder
 
-    var kick = new SamplePattern("/assets/Kick_ac_close.wav", 'kick', [1,0,1,0,1,0,1,0]);
+    var kick = new SamplePattern("/assets/Kick_ac_close.wav", 'kick', [true,false,true,false,true,false,true,false]);
 
-    var crash = new SamplePattern("/assets/Crash1_ac_close.wav", 'crash', [0,0,0,0,0,0,0,1]);
+    var crash = new SamplePattern("/assets/Crash1_ac_close.wav", 'crash', [false,false,false,false,false,false,false,true]);
 
-    var hat = new SamplePattern("/assets/ClosedHat_ac_close.wav", 'hat', [1,1,1,1,1,1,1,1]);
+    var hat = new SamplePattern("/assets/ClosedHat_ac_close.wav", 'hat', [true,true,true,true,true,true,true,true]);
 
-    var snare = new SamplePattern("/assets/Snare_ac_close.wav", 'snare', [0,1,0,1,0,1,0,1]);
+    var snare = new SamplePattern("/assets/Snare_ac_close.wav", 'snare', [false,true,false,true,false,true,false,true]);
 
     var temporarilyServerFree = new Template({'samplePatterns' : [kick, snare, crash, hat], 'tempo' : 120})
 
@@ -24,7 +24,8 @@ $(document).ready(function() {
 
   View = new View( Model, {
   	'tempoSlide' : $('#tempoSlide'),
-  	'playToggle' : 'butt'
+  	'playToggle' : 'butt',
+    '$table' : $('table')
   });
 
   Controller = new Controller(Model, View);

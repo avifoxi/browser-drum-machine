@@ -2,10 +2,16 @@ function View(model, elements) {
 	this.model = model;
 	this.playToggle = elements.playToggle;
 	this.tempoSlide = elements.tempoSlide;
+	this.$table = elements.$table;
 	// this.volKnob = elements.volKnob;
 
+	var _this = this;
 	this.tempoSlide.change(function(e){ 
 		console.log(e); 
+	});
+
+	this.$table.change(function(e){		
+		_this.model.updateTemplate(e)
 	});
 
 
@@ -64,7 +70,7 @@ View.prototype = {
 		var input = document.createElement('input');
 		input.type = 'checkbox';
 
-		var beatId = name + index;
+		var beatId = name + '-' + index;
 		input.id = beatId
 		
 		beatCell.appendChild(input);
@@ -77,7 +83,7 @@ View.prototype = {
 
 		row.appendChild(td);
 		
-		if (playBool == 1) {
+		if (playBool) {
 			input.checked = true;
 		}
 

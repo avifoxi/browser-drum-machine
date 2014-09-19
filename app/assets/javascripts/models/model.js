@@ -1,7 +1,7 @@
 function Model(params) {
-	this.met = 'metronome placeholder';
+	this.met = 'metronome object';
 	this.audioContext = params.context; 
-	this.template = 'placeholder for template';
+	this.template = 'template object';
 }
 
 
@@ -13,6 +13,16 @@ Model.prototype = {
 	},
 	prepTemplate : function() {
 		// console.log('placeholder for prepping template from json')
+	},
+	updateTemplate : function(e) {
+		var sPs = this.template.samplePatterns;
+		var nameIndex = e.target.id.split('-');
+
+		var target = sPs.filter(function(sp) {
+			return sp.name == nameIndex[0]
+		})[0];
+		
+		target.pattern[ nameIndex[1] ] = !(target.pattern[ nameIndex[1] ]);
 	}
 
 }
