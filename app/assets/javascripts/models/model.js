@@ -23,8 +23,15 @@ Model.prototype = {
 		})[0];
 		
 		target.pattern[ nameIndex[1] ] = !(target.pattern[ nameIndex[1] ]);
-	}
+	},
+	samplesToSchedule : function(index) {
+		var sPs = this.template.samplePatterns;
+		var targets = sPs.filter(function(sp) {
+			return sp.pattern[index] == true
+		});
 
+		return targets;
+	}
 }
 
 
