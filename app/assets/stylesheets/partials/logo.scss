@@ -1,0 +1,24 @@
+.logo {
+}
+
+.logo-text {
+	font-family: $logofont;
+	// z-index: 2;
+	display: block;
+
+	.foxi {
+		color: $sunset + 40;
+	}
+	.drum {
+		color: $sunset + 10;
+	}
+
+	
+}
+
+.logo-lines {
+	height: 1em;
+	border-top: $sunset solid 0.15em;
+	border-bottom: $sunset solid 0.15em;
+	
+}
