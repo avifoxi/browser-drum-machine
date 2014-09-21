@@ -4,13 +4,14 @@ $(document).ready(function() {
   // on promise - initialize view building board 
   // data to be served by server, placeholder
 
-    var kick = new SamplePattern("/assets/Kick_ac_close.wav", 'kick', [true,false,true,false,true,false,true,false]);
 
-    var crash = new SamplePattern("/assets/Crash1_ac_close.wav", 'crash', [false,false,false,false,false,false,false,true]);
+    var kick = new SamplePattern( 'https://s3.amazonaws.com/foxi-drum-machine-assets/Kick_ac_close.wav', 'kick', [true,false,true,false,true,false,true,false]);
 
-    var hat = new SamplePattern("/assets/ClosedHat_ac_close.wav", 'hat', [true,true,true,true,true,true,true,true]);
+    var crash = new SamplePattern( 'https://s3.amazonaws.com/foxi-drum-machine-assets/Crash1_ac_close.wav' , 'crash', [false,false,false,false,false,false,false,true]);
+    
+    var hat = new SamplePattern( 'https://s3.amazonaws.com/foxi-drum-machine-assets/ClosedHat_ac_close.wav', 'hat', [true,true,true,true,true,true,true,true]);
 
-    var snare = new SamplePattern("/assets/Snare_ac_close.wav", 'snare', [false,true,false,true,false,true,false,true]);
+    var snare = new SamplePattern( 'https://s3.amazonaws.com/foxi-drum-machine-assets/Snare_ac_close.wav' , 'snare', [false,true,false,true,false,true,false,true]);
 
     var temporarilyServerFree = new Template({'samplePatterns' : [kick, snare, crash, hat], 'tempo' : 120})
 
