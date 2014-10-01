@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'templates/:id' => 'templates#show'
 
+  get 'audio_assets/:key' => 'audio_assets#load'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
