@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'templates#index'
 
+  get 'templates/:id' => 'templates#show'
+
+  get 'audio_assets/:key' => 'audio_assets#load'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
