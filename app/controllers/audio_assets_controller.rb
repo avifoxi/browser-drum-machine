@@ -5,7 +5,6 @@ class AudioAssetsController < ApplicationController
 		key =  params[:key]
 		format = params[:format]
 
-		puts key
 		s3 = AWS::S3.new
 		bucket = s3.buckets['foxi-drum-machine-assets']
 		response = bucket.objects[key + "." + format].read
@@ -13,11 +12,9 @@ class AudioAssetsController < ApplicationController
 		if response
 			send_data response, :type => 'audio/wav', :disposition => 'inline'
 		else
-			'sorry dude'
+			'load error with this sample, sorry!'
 		end
-		# respond_to do |format|
-	 #    format.arraybuffer {}
-  # 	end
+
 	end
 
 end
