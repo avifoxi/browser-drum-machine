@@ -14025,3 +14025,465 @@ ActionController::RoutingError (No route matches [GET] "/assets/public/woodpanel
 
 [AWS S3 403 0.566897 0 retries] list_buckets() AWS::S3::Errors::AccessDenied Access Denied
 
+[AWS S3 200 0.620947 0 retries] list_buckets()  
+
+[AWS S3 200 0.519804 0 retries] get_bucket_location(:bucket_name=>"foxi-drum-machine-assets")  
+
+[AWS S3 200 0.156487 0 retries] list_objects(:bucket_name=>"foxi-drum-machine-assets",:max_keys=>1)  
+
+[AWS S3 200 0.15138 0 retries] list_objects(:bucket_name=>"foxi-drum-machine-assets",:max_keys=>1)  
+
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-01 10:25:42 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TemplatesController#index as HTML
+  Rendered partials/_logo.html.erb (0.5ms)
+  Rendered partials/_control_bar.html.erb (0.4ms)
+  Rendered partials/_dynamic_rows_control.html.erb (0.4ms)
+  Rendered templates/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 223ms (Views: 222.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:42 -0400
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:42 -0400
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:42 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-01 10:25:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:43 -0400
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:43 -0400
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:43 -0400
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:43 -0400
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 10:25:43 -0400
+
+
+Started GET "/assets/public/woodpanel.jpg" for 127.0.0.1 at 2014-10-01 10:25:43 -0400
+
+ActionController::RoutingError (No route matches [GET] "/assets/public/woodpanel.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.1ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.8ms)
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:25:49 -0400
+
+ActionController::RoutingError (No route matches [GET] "/templates/1"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.1ms)
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered templates/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 285ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 10:26:34 -0400
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered templates/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 86ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:07 -0400
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered templates/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 84ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:10 -0400
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered templates/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 81ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:11 -0400
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered templates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 88ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 10:28:19 -0400
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered templates/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 10:31:47 -0400
+[AWS S3 200 0.13945 0 retries] list_objects(:bucket_name=>"foxi-drum-machine-assets",:max_keys=>1)  
+
+[AWS S3 200 0.488416 0 retries] list_objects(:bucket_name=>"foxi-drum-machine-assets",:max_keys=>1)  
+
+[AWS S3 200 0.569368 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"ClosedHat_ac_close.wav")  
+
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:39:06 -0400
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"1"}
+[AWS S3 200 0.596097 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"ClosedHat_ac_close.wav")  
+
+  Rendered templates/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 647ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 10:39:07 -0400
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:40:16 -0400
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+
+NameError (undefined local variable or method `buck' for #<TemplatesController:0x007f99052182e8>):
+  app/controllers/templates_controller.rb:9:in `show'
+
+
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.1ms)
+
+
+Started GET "/templates/1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+Processing by TemplatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered templates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 77ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 10:40:34 -0400
