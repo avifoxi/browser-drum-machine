@@ -14009,3 +14009,19 @@ ActionController::RoutingError (No route matches [GET] "/assets/public/woodpanel
   Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
   Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
   Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.4ms)
+[AWS S3 403 0.599031 0 retries] list_buckets() AWS::S3::Errors::AccessDenied Access Denied
+
+[AWS S3 403 0.745247 0 retries] get_bucket_acl(:bucket_name=>"foxi-drum-machine-assets") AWS::S3::Errors::AccessDenied Access Denied
+
+[AWS S3 404 0.314596 0 retries] list_objects(:bucket_name=>"foxi-drum-machine",:max_keys=>1000) AWS::S3::Errors::NoSuchBucket The specified bucket does not exist
+
+[AWS S3 403 0.136492 0 retries] list_objects(:bucket_name=>"foxi-drum-machine-assets",:max_keys=>1000) AWS::S3::Errors::AccessDenied Access Denied
+
+[AWS S3 403 0.510817 0 retries] list_buckets() AWS::S3::Errors::AccessDenied Access Denied
+
+[AWS S3 403 0.18693 0 retries] list_buckets() AWS::S3::Errors::AccessDenied Access Denied
+
+[AWS S3 403 0.170128 0 retries] list_buckets() AWS::S3::Errors::AccessDenied Access Denied
+
+[AWS S3 403 0.566897 0 retries] list_buckets() AWS::S3::Errors::AccessDenied Access Denied
+
