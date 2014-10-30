@@ -32,6 +32,8 @@ gem 'rails_12factor', group: :production
 gem 'aws-sdk', '~> 1.48.1'
 gem 'uuid', '~> 2.3.7'
 
+gem 'polymer-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
