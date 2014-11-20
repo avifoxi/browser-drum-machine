@@ -37,7 +37,7 @@ beatBuilder = {
 		return row;
 	}, 
 	appendNewBeat : function(row, name, index, playBool) {
-	
+		console.log(row);
 		var td = document.createElement('td');
 		var beatCell = document.createElement('div');
 		beatCell.classList.add('beatCell');
@@ -64,5 +64,10 @@ beatBuilder = {
 	},
 	removeRow : function(rowId) {
 		$("#" + rowId).remove();
+	},
+	removeBeat : function(rowIndex) {
+		var row = $('tr')[rowIndex];
+		var last = _.last(row.childNodes);
+		last.remove();
 	}
 }

@@ -58,10 +58,23 @@ View.prototype = {
 		var _this = this;
 		switch (e.target.innerText) {
 		  case "+" :
-		    console.log(e.target.parentElement.innerText);
+		    var patternIndex = _.indexOf($('th'), e.target.parentElement)
+		    var name = _this.model.template.samplePatterns[patternIndex].name
+		    var beatIndex = _this.model.template.samplePatterns[patternIndex].pattern.length;
+		    _this.model.template.samplePatterns[patternIndex].pattern.push(false);
+		    beatBuilder.appendNewBeat( $('tr')[patternIndex], beatIndex, 8, false); 
+		    
+		    console.log( JSON.stringify(_this.model.template.samplePatterns) );
+
 		    break;
 		  case "-" :
-		    console.log("minus me.");
+		    var patternIndex = _.indexOf($('th'), e.target.parentElement) ;
+		    var name = _this.model.template.samplePatterns[patternIndex].name;
+				_this.model.template.samplePatterns[patternIndex].pattern.pop();
+				beatBuilder.removeBeat(patternIndex);
+
+		    console.log( JSON.stringify(_this.model.template.samplePatterns) );
+
 		    break;
 		}
 	}
