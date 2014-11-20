@@ -3,6 +3,7 @@ function View(model, elements) {
 	this.$playToggle = elements.playToggle;
 	this.tempoSlide = elements.tempoSlide;
 	this.$table = elements.$table;
+	// this.$plMinButts = $('th');
 	// this.volKnob = elements.volKnob;
 
 	var _this = this;
@@ -14,10 +15,19 @@ function View(model, elements) {
 		_this.model.updateTemplate(e)
 	});
 
+	this.$table.click(function(e){	
+		_this.handleClick(e);
+	});
+
 	this.$playToggle.click(function(e){
 		Controller.togglePlay();
-	})
+	});
 
+
+
+	// this.$plMinButts.click(function(e){
+	// 	console.log(e.target);
+	// })
 }
 
 
@@ -43,7 +53,18 @@ View.prototype = {
 	},
 	updateTempoDisplay : function(tempo) {
 		$('#showTempo').html(tempo)
-	} 	
+	}, 
+	handleClick : function(e) {
+		var _this = this;
+		switch (e.target.innerText) {
+		  case "+":
+		    console.log("plus me");
+		    break;
+		  case "-":
+		    console.log("minus me.");
+		    break;
+		}
+	}
 }
 
 

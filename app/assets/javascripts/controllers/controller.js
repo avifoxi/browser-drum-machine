@@ -11,6 +11,7 @@ Controller.prototype = {
 		
 		this.model.init();
 		this.view.buildGrid();
+		this.view.newButtonsListen();
 
 
 	},
