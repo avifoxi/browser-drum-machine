@@ -26,6 +26,13 @@ beatBuilder = {
 		row.id = name;
 		var heading = document.createElement('th')
 		heading.innerText = name;
+		var pl = document.createElement('button');
+		var min = document.createElement('button');
+		pl.innerText = ' + ' ;
+		min.innerText = ' - ' ;
+		heading.appendChild(pl);
+		heading.appendChild(min);
+
 		row.appendChild(heading);
 		return row;
 	}, 
