@@ -33,9 +33,9 @@ MetroGnome.prototype = {
         
         // or - eliminate the wrap - keep a running tally of 16th notes - and deduce each soundSequences next column by runnin a modulo of the current 16th. post MVP
 
-        if (this.current16thNote == 8) {
-            this.current16thNote = 0;
-        }
+        // if (this.current16thNote == 8) {
+        //     this.current16thNote = 0;
+        // }
     }, 
     scheduleNote : function( sounds, time ) {
         // var _this = this;
