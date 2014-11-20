@@ -28,5 +28,9 @@ Controller.prototype = {
 		this.model.updateTempo(newTempo);
 		var newTempo = _this.model.met.tempo;
 		this.view.updateTempoDisplay(newTempo);
+	},
+	nextNote : function(num) {
+		// console.log(num);
+		this.view.highlightCurrent(num);
 	}
 }

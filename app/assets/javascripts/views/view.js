@@ -75,6 +75,20 @@ View.prototype = {
 
 		    break;
 		}
+	},
+	highlightCurrent : function (current16th){
+		$('.current').removeClass('current');
+		var $rows = $('tr');
+		_.each($rows, function(row){
+			var l = row.children.length - 1 ;	
+			
+			var target = (current16th % l);
+			var adjust = target + 2;
+
+			var nowBeat = $( '#' + row.id + ' td:nth-child(' + adjust +')') ;
+			nowBeat[0].firstChild.classList.add('current');
+		});
+		
 	}
 }
 
