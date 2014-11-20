@@ -62,9 +62,8 @@ View.prototype = {
 		    var name = _this.model.template.samplePatterns[patternIndex].name
 		    var beatIndex = _this.model.template.samplePatterns[patternIndex].pattern.length;
 		    _this.model.template.samplePatterns[patternIndex].pattern.push(false);
-		    beatBuilder.appendNewBeat( $('tr')[patternIndex], beatIndex, 8, false); 
+		    beatBuilder.appendNewBeat( $('tr')[patternIndex], name, beatIndex, false); 
 		    
-		    console.log( JSON.stringify(_this.model.template.samplePatterns) );
 
 		    break;
 		  case "-" :
@@ -72,7 +71,6 @@ View.prototype = {
 		    var name = _this.model.template.samplePatterns[patternIndex].name;
 				_this.model.template.samplePatterns[patternIndex].pattern.pop();
 				beatBuilder.removeBeat(patternIndex);
-
 		    console.log( JSON.stringify(_this.model.template.samplePatterns) );
 
 		    break;

@@ -18,10 +18,16 @@ Model.prototype = {
 	updateTemplate : function(e) {
 		var sPs = this.template.samplePatterns;
 		var nameIndex = e.target.id.split('-');
+		// console.log('sPs : ' + sPs);
+		console.log('nameIndex :' + nameIndex);
+
+		// nameIndex[0]
 
 		var target = sPs.filter(function(sp) {
 			return sp.name == nameIndex[0]
 		})[0];
+
+		// console.log(target);
 		
 		target.pattern[ nameIndex[1] ] = !(target.pattern[ nameIndex[1] ]);
 	},
