@@ -57,10 +57,10 @@ View.prototype = {
 	handleClick : function(e) {
 		var _this = this;
 		switch (e.target.innerText) {
-		  case "+":
-		    console.log("plus me");
+		  case "+" :
+		    console.log(e.target.parentElement.innerText);
 		    break;
-		  case "-":
+		  case "-" :
 		    console.log("minus me.");
 		    break;
 		}

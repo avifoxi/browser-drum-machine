@@ -17989,3 +17989,717 @@ Processing by AudioAssetsController#load as
   Rendered text template (0.0ms)
 Sent data  (0.5ms)
 Completed 200 OK in 173ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+Processing by TemplatesController#index as HTML
+  Rendered partials/_logo.html.erb (0.1ms)
+  Rendered partials/_control_bar.html.erb (0.1ms)
+  Rendered partials/_dynamic_rows_control.html.erb (0.0ms)
+  Rendered templates/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 122ms (Views: 122.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/audio_assets.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 19:50:55 -0500
+
+
+Started GET "/assets/public/woodpanel.jpg" for 127.0.0.1 at 2014-11-19 19:50:56 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/public/woodpanel.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.7ms)
+
+
+Started GET "/audio_assets/Kick_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:50:56 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Kick_ac_close"}
+[AWS S3 200 0.680906 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Kick_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 684ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Snare_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:50:56 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Snare_ac_close"}
+[AWS S3 200 0.202719 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Snare_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 205ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Crash1_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:50:56 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Crash1_ac_close"}
+[AWS S3 200 0.466706 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Crash1_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 469ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/ClosedHat_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:50:57 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"ClosedHat_ac_close"}
+[AWS S3 200 0.140254 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"ClosedHat_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 142ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 19:52:40 -0500
+Processing by TemplatesController#index as HTML
+  Rendered partials/_logo.html.erb (0.1ms)
+  Rendered partials/_control_bar.html.erb (0.1ms)
+  Rendered partials/_dynamic_rows_control.html.erb (0.0ms)
+  Rendered templates/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 122ms (Views: 121.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 19:52:40 -0500
+
+
+Started GET "/assets/audio_assets.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+
+Started GET "/assets/public/woodpanel.jpg" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/public/woodpanel.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.7ms)
+
+
+Started GET "/audio_assets/Kick_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Kick_ac_close"}
+[AWS S3 200 0.703149 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Kick_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 706ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Snare_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:52:41 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Snare_ac_close"}
+[AWS S3 200 0.170515 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Snare_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 173ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Crash1_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:52:42 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Crash1_ac_close"}
+[AWS S3 200 0.46623 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Crash1_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 469ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/ClosedHat_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:52:42 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"ClosedHat_ac_close"}
+[AWS S3 200 1.75138 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"ClosedHat_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.9ms)
+Completed 200 OK in 1754ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+Processing by TemplatesController#index as HTML
+  Rendered partials/_logo.html.erb (0.1ms)
+  Rendered partials/_control_bar.html.erb (0.2ms)
+  Rendered partials/_dynamic_rows_control.html.erb (0.1ms)
+  Rendered templates/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 118ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/audio_assets.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+
+Started GET "/assets/public/woodpanel.jpg" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/public/woodpanel.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.0ms)
+
+
+Started GET "/audio_assets/Kick_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:52:55 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Kick_ac_close"}
+[AWS S3 200 0.392385 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Kick_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 395ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Snare_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:52:56 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Snare_ac_close"}
+[AWS S3 200 0.294334 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Snare_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 297ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Crash1_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:52:56 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Crash1_ac_close"}
+[AWS S3 200 0.606315 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Crash1_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 609ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/ClosedHat_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:52:57 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"ClosedHat_ac_close"}
+[AWS S3 200 0.116658 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"ClosedHat_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 119ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+Processing by TemplatesController#index as HTML
+  Rendered partials/_logo.html.erb (0.0ms)
+  Rendered partials/_control_bar.html.erb (0.0ms)
+  Rendered partials/_dynamic_rows_control.html.erb (0.0ms)
+  Rendered templates/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/audio_assets.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+
+Started GET "/assets/public/woodpanel.jpg" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/public/woodpanel.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.8ms)
+
+
+Started GET "/audio_assets/Crash1_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:53:06 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Crash1_ac_close"}
+[AWS S3 200 1.665309 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Crash1_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 1668ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Kick_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:53:08 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Kick_ac_close"}
+[AWS S3 200 0.269863 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Kick_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 273ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/ClosedHat_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:53:08 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"ClosedHat_ac_close"}
+[AWS S3 200 0.119861 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"ClosedHat_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 122ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Snare_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:53:08 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Snare_ac_close"}
+[AWS S3 200 0.178135 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Snare_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 181ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 19:54:41 -0500
+Processing by TemplatesController#index as HTML
+  Rendered partials/_logo.html.erb (0.0ms)
+  Rendered partials/_control_bar.html.erb (0.0ms)
+  Rendered partials/_dynamic_rows_control.html.erb (0.0ms)
+  Rendered templates/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 130ms (Views: 129.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 19:54:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/audio_assets.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+
+Started GET "/assets/public/woodpanel.jpg" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/public/woodpanel.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.1ms)
+
+
+Started GET "/audio_assets/Kick_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Kick_ac_close"}
+[AWS S3 200 0.703723 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Kick_ac_close.wav")  
+
+  Rendered text template (0.1ms)
+Sent data  (1.2ms)
+Completed 200 OK in 707ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/ClosedHat_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:54:42 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"ClosedHat_ac_close"}
+[AWS S3 200 0.29901 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"ClosedHat_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 302ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Snare_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:54:43 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Snare_ac_close"}
+[AWS S3 200 0.944589 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Snare_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.6ms)
+Completed 200 OK in 947ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Crash1_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:54:44 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Crash1_ac_close"}
+[AWS S3 200 0.458337 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Crash1_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 461ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+Processing by TemplatesController#index as HTML
+  Rendered partials/_logo.html.erb (0.0ms)
+  Rendered partials/_control_bar.html.erb (0.0ms)
+  Rendered partials/_dynamic_rows_control.html.erb (0.0ms)
+  Rendered templates/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 127ms (Views: 127.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/documentReady.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/controllers/controller.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/audio_assets.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/models/metronome.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/models/model.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/models/templates.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/views/beatBuilder.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/views/view.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+
+Started GET "/assets/public/woodpanel.jpg" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/public/woodpanel.jpg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/AviFoxi/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/AviFoxi/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.5ms)
+
+
+Started GET "/audio_assets/Kick_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:55:01 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Kick_ac_close"}
+[AWS S3 200 0.712756 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Kick_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 716ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Snare_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:55:02 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Snare_ac_close"}
+[AWS S3 200 0.222773 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Snare_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.5ms)
+Completed 200 OK in 225ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/ClosedHat_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:55:02 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"ClosedHat_ac_close"}
+[AWS S3 200 0.146761 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"ClosedHat_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.7ms)
+Completed 200 OK in 188ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/audio_assets/Crash1_ac_close.wav" for 127.0.0.1 at 2014-11-19 19:55:02 -0500
+Processing by AudioAssetsController#load as 
+  Parameters: {"key"=>"Crash1_ac_close"}
+[AWS S3 200 0.493091 0 retries] get_object(:bucket_name=>"foxi-drum-machine-assets",:key=>"Crash1_ac_close.wav")  
+
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 496ms (Views: 0.6ms | ActiveRecord: 0.0ms)
