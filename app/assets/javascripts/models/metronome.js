@@ -31,11 +31,7 @@ MetroGnome.prototype = {
 
         this.current16thNote++;    // Advance the beat number, wrap to zero
         
-        // or - eliminate the wrap - keep a running tally of 16th notes - and deduce each soundSequences next column by runnin a modulo of the current 16th. post MVP
-
-        if (this.current16thNote == 8) {
-            this.current16thNote = 0;
-        }
+        Controller.nextNote(_this.current16thNote);
     }, 
     scheduleNote : function( sounds, time ) {
         // var _this = this;

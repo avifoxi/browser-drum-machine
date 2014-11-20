@@ -26,11 +26,18 @@ beatBuilder = {
 		row.id = name;
 		var heading = document.createElement('th')
 		heading.innerText = name;
+		var pl = document.createElement('button');
+		var min = document.createElement('button');
+		pl.innerText = ' + ' ;
+		min.innerText = ' - ' ;
+		heading.appendChild(pl);
+		heading.appendChild(min);
+
 		row.appendChild(heading);
 		return row;
 	}, 
 	appendNewBeat : function(row, name, index, playBool) {
-	
+		console.log(row);
 		var td = document.createElement('td');
 		var beatCell = document.createElement('div');
 		beatCell.classList.add('beatCell');
@@ -57,5 +64,10 @@ beatBuilder = {
 	},
 	removeRow : function(rowId) {
 		$("#" + rowId).remove();
+	},
+	removeBeat : function(rowIndex) {
+		var row = $('tr')[rowIndex];
+		var last = _.last(row.childNodes);
+		last.remove();
 	}
 }
