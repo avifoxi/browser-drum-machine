@@ -81,11 +81,12 @@ View.prototype = {
 		var $rows = $('tr');
 		_.each($rows, function(row){
 			var l = row.children.length - 1 ;	
-			
+			console.log('length of row: ' + l);
 			var target = (current16th % l);
 			var adjust = target + 2;
-
+			console.log('adjusted target of current: ' + adjust);
 			var nowBeat = $( '#' + row.id + ' td:nth-child(' + adjust +')') ;
+			console.log(nowBeat);
 			nowBeat[0].firstChild.classList.add('current');
 		});
 		
